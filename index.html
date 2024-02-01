@@ -13,7 +13,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="top-bar">
+      <span id="current-time"></span>
+      <span id="current-day"></span>
+    </div>
+
     <button id="darkModeToggle" class="fa-solid fa-sun"></button>
+    <button
+      class="fa-solid fa-location-arrow"
+      id="getCurrentLocationBtn"
+    ></button>
 
     <div class="container">
       <div class="header">
@@ -29,12 +38,12 @@
       </div>
 
       <div class="location-not-found">
-        <h1>Sorry, Location not found!!!</h1>
-        <img src="/assets/404.png" alt="404 Error" />
+        <h1>Sorry, Location not found !!</h1>
+        <img src="./assets/404.png" alt="404 Error" />
       </div>
 
       <div class="weather-body">
-        <img src="/assets/cloud.png" alt="Weather Image" class="weather-img" />
+        <img src="./assets/cloud.png" alt="Weather Image" class="weather-img" />
 
         <div class="weather-box">
           <p class="temperature">0 <sup>°C</sup></p>
@@ -60,7 +69,9 @@
         </div>
       </div>
     </div>
-
+    <footer>
+      <p>Made By Ankit Chauhan</p>
+    </footer>
     <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/595a890311.js"

@@ -4,23 +4,59 @@
 
 body {
   min-height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
   font-family: "Montserrat", sans-serif;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Add Dark Mode styles */
 .dark-mode {
   background-color: #000000;
   color: #ecf0f1;
 }
 
+.container {
+  margin-top: 15px;
+  width: 400px;
+  height: min-content;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.dark-mode .container {
+  background-color: #34495e;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box {
+  flex: 1;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #000;
+  background-color: #e6f5fb;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: none;
+}
+
+.input-box::placeholder {
+  color: #000;
+}
 #darkModeToggle {
-  position: fixed;
-  top: 10px;
+  position: absolute;
+  top: 50px;
   right: 10px;
   background-color: var(--primary-color);
   color: #fff;
@@ -33,7 +69,47 @@ body {
 }
 
 #darkModeToggle:hover {
-  background-color: #34495e;
+  background-color: #000000;
+}
+
+.fa-magnifying-glass {
+  margin-left: 10px;
+  width: 46px;
+  height: 46px;
+  background-color: #e6f5fb;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.fa-magnifying-glass:hover {
+  background-color: #ababab;
+  color: #fff;
+}
+
+.dark-mode .search-box input {
+  color: #fff;
+  background-color: #6e95bd;
+}
+
+.dark-mode .fa-magnifying-glass {
+  background-color: #6e95bd;
+}
+
+.dark-mode .location-not-found h1 {
+  color: #ecf0f1;
+}
+
+.dark-mode .weather-box .temperature,
+.dark-mode .weather-box .description,
+.dark-mode .humidity span,
+.dark-mode .wind span {
+  color: #ecf0f1;
+}
+
+.dark-mode .weather-details i {
+  color: #ecf0f1;
 }
 
 .container {
@@ -168,4 +244,50 @@ body {
 .text span {
   font-size: 20px;
   font-weight: 700;
+}
+
+#getCurrentLocationBtn {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#getCurrentLocationBtn:hover {
+  background-color: #000000;
+}
+
+#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 17, 255);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+footer p {
+  margin: 0;
+}
+footer {
+  background-color: rgb(0, 17, 255);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
