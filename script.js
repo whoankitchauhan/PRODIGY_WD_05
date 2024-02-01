@@ -11,13 +11,14 @@ const weather_body = document.querySelector(".weather-body");
 const currentTime = document.getElementById("current-time");
 const currentDay = document.getElementById("current-day");
 
+const api_key = "d3717856a4b39c442378ced8ab699457"; 
+
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   document.querySelector(".container").classList.toggle("dark-mode");
 });
 
 async function checkWeather(city) {
-  const api_key = "d3717856a4b39c442378ced8ab699457";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
   try {
