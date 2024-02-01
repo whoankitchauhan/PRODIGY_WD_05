@@ -1,3 +1,5 @@
+const api_key = "d3717856a4b39c442378ced8ab699457";
+
 const inputBox = document.querySelector(".input-box");
 const searchBtn = document.getElementById("searchBtn");
 const darkModeToggle = document.getElementById("darkModeToggle");
@@ -10,8 +12,6 @@ const location_not_found = document.querySelector(".location-not-found");
 const weather_body = document.querySelector(".weather-body");
 const currentTime = document.getElementById("current-time");
 const currentDay = document.getElementById("current-day");
-
-const api_key = "d3717856a4b39c442378ced8ab699457"; 
 
 darkModeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
