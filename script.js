@@ -106,7 +106,7 @@ getCurrentLocationBtn.addEventListener("click", () => {
 });
 
 async function getCityNameByCoordinates(latitude, longitude) {
-  const reverseGeocodingApiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${api_key}`;
+  const reverseGeocodingApiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${api_key}`;
   try {
     const response = await fetch(reverseGeocodingApiUrl);
     if (!response.ok) {
