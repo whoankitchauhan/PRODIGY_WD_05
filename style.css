@@ -233,7 +233,8 @@ body {
 }
 
 .weather-details i {
-  font-size: 36px;
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
 .weather-details .text {
@@ -309,4 +310,17 @@ footer .fa-linkedin {
 
 footer .fa-github {
   color: #333; /* GitHub color */
+}
+
+/* Media Query for better responsiveness */
+@media (max-width: 600px) {
+  #darkModeToggle {
+    right: 10%;
+    top: 65%;
+  }
+
+  #getCurrentLocationBtn {
+    left: 10%;
+    top: 65%;
+  }
 }
