@@ -20,7 +20,6 @@ darkModeToggle.addEventListener("click", () => {
 
 async function checkWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
-
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -107,6 +106,7 @@ getCurrentLocationBtn.addEventListener("click", () => {
 
 async function getCityNameByCoordinates(latitude, longitude) {
   const reverseGeocodingApiUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=${api_key}`;
+
   try {
     const response = await fetch(reverseGeocodingApiUrl);
     if (!response.ok) {
